@@ -5,15 +5,29 @@
     <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
   </head>
   <body>
-    <div class="ct-chart ct-perfect-fourth"></div>
+    <div class="ct-chart"></div>
     <script>
-    	var data = {
+    	var data = new Chartist.Line('.ct-chart', {
   // A labels array that can contain any sort of values
-  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+  labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
   // Our series array that contains series objects or in this case series data arrays
   series: [
-    [15, 12, 40, 22, 10]
+    [10, 6, 7, 8, 5, 4, 6, 2, 3, 3, 4, 6],
+    [4, 9, 3, 6, 3, 5, 5, 3, 4, 4, 7, 5]
   ]
+}, {
+  height: 355,
+  width: 450,
+  showArea: true,
+  axisX: {
+    showLabel: false,
+    showGrid: false
+  },
+  axisY: {
+    showLabel: false,
+    showGrid: false
+  },
+  low: 0
 };
 
 // Create a new line chart object where as first parameter we pass in a selector
