@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  </head>
+  <body>
+    <div class="ct-chart"></div>
+    <script>
+
+fetch('https://drive.google.com/file/d/1wgFcyPDh_5LhqW5t2nyLj21hRjJHi_yR/view?usp=sharing')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(ids) {
+  //data variable will go here
+    var data = {
+      labels: ids.map(function(duhname) {
+        return duhname.Label;
+      }),
+      series: ids.map(function(duharea) {
+        return duharea.Value;
+      })
+    };
+    
+    //options variable will go here
+    var options = {
+     width: 600,
+      height: 450,
+      distributeSeries: true
+    };
+  
+   //define chart variable will go here
+    var chart = new Chartist.Bar('.ct-chart', data, options);
+  });
+
+
+
+    </script>
+  </body>
+</html>
