@@ -139,6 +139,32 @@ chart.on('created', function() {
 // that is resolving to our chart container element. The Second parameter
 // is the actual data object.
 new Chartist.Line('.ct-chart', data);
+
+fetch('https://drive.google.com/file/d/1mO3vSNBb0TqmvdSre8SEqY7Zz2LU9uvW/view?usp=sharing')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(ids) {
+  //data variable will go here
+    var data = {
+      labels: ids.map(function(id) {
+        return id.Label;
+      }),
+      series: ids.map(function(id) {
+        return id.Value;
+      })
+    };
+    
+    //options variable will go here
+    var options = {
+     width: 400,
+      height: 300,
+      distributeSeries: true
+    };
+  
+   //define chart variable will go here
+    var chart = new Chartist.Bar('.ct-chart', data, options);
+  });
     </script>
   </body>
 </html>
