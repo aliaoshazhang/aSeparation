@@ -15,11 +15,11 @@ fetch('https://drive.google.com/file/d/1wgFcyPDh_5LhqW5t2nyLj21hRjJHi_yR/view?us
   .then(function(ids) {
   //data variable will go here
     var data = {
-      labels: ids.map(function(duhname) {
-        return duhname.Label;
+      labels: ids.map(function(id) {
+        return id.duhname.Label;
       }),
       series: ids.map(function(duharea) {
-        return duharea.Value;
+        return id.duharea.Value;
       })
     };
     
