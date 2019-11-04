@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  </head>
+  <body>
+    <div class="ct-chart"></div>
+    <script>
+
+fetch('https://aliaoshazhang.github.io/aSeparation/trial.html')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(users) {
+    var data = {
+      labels: users.map(function(user) {
+        return user.name;
+      }),
+      series: users.map(function(user) {
+        return user.name.length;
+      })
+    };
+  
+    var chart = new Chartist.Bar('#chart', data, {
+      distributeSeries: true
+    });
+  });
+    
+    //options variable will go here
+    var options = {
+     width: 600,
+      height: 450,
+      distributeSeries: true
+    };
+  
+   //define chart variable will go here
+
+
+
+    </script>
+  </body>
+</html>
