@@ -31,7 +31,24 @@ var options = {
 
   
    //define chart variable will go here
-    new Chartist.Bar('.ct-chart', data, options);
+new Chartist.Bar('.ct-chart', data, options {
+  chartPadding: {
+    top: 20,
+    bottom: 20,
+    left: 20,
+    right: 20
+  });
+
+.ct-series-a .ct-bar {
+  /* Colour of your bars */
+  stroke: blue;
+  /* The width of your bars */
+  stroke-width: 10 px;
+  /* Yes! Dashed bars! */
+  stroke-dasharray: 20 px;
+  /* Maybe you like round corners on your bars? */
+  stroke-linecap: round;
+}
 
 
   
