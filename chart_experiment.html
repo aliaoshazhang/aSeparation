@@ -27,7 +27,12 @@ var options = {
   },
 };
 
-new Chartist.Bar('.ct-chart', data, options);
+new Chartist.Bar('.ct-chart', data, options, chartPadding: {
+    top: 20,
+    bottom: 20,
+    left: 20,
+    right: 20
+  });
 
 
 
