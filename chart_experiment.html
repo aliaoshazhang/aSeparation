@@ -5,7 +5,7 @@
     <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
   </head>
   <body>
-    <div class="ct-chart ct-major-seventh"></div>
+    <div class="ct-chart ct-golden-section"></div>
     <script>
 var data = {
   labels: ['Akami-Uapishkᵁ-KakKasuak-Mealy Mountains(Reserve)', 'Aulavik', 'Auyuittuq', 'Banff‡', 'Bruce Peninsula', 'Cape Breton Highlands', 'Elk Island', 'Forillon', 'Fundy', 'Georgian Bay Islands', 'Glacier', 'Grasslands', 'Gros Morne‡', 'Gulf Islands(Reserve)', 'Gwaii Haanas‡[a](Reserve)', 'Ivvavik[b]', 'Jasper‡', 'Kejimkujik', 'Kluane‡[c](two units: a Park and a Reserve)', 'Kootenay‡', 'Kouchibouguac', 'La Mauricie', 'Mingan Archipelago(Reserve)', 'Mount Revelstoke', "Nááts'ihch'oh(Reserve)", 'Nahanni‡(Reserve)', 'Pacific Rim(Reserve)', 'Point Pelee', 'Prince Albert', 'Prince Edward Island', 'Pukaskwa', 'Qausuittuq', 'Quttinirpaaq[e]', 'Riding Mountain', 'Rouge(Urban)', 'Sable Island(Reserve)', 'Sirmilik', 'Terra Nova', 'Thaidene Nëné(Reserve)', 'Thousand Islands', 'Torngat Mountains', 'Tuktut Nogait', 'Ukkusiksalik', 'Vuntut', 'Wapusk', 'Waterton Lakes‡[f]', 'Wood Buffalo‡', 'Yoho‡'],
@@ -31,13 +31,7 @@ var options = {
 
   
    //define chart variable will go here
-new Chartist.Bar('.ct-chart', data, options, {
-  chartPadding: {
-    top: 20,
-    bottom: 20,
-    left: 20,
-    right: 20
-  });
+new Chartist.Bar('.ct-chart', data, options);
 
 
 
