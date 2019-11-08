@@ -27,13 +27,11 @@ var options = {
   },
 };
 
-new Chartist.Bar('.ct-chart', data, options, chartPadding: {
-    top: 20,
-    bottom: 20,
-    left: 20,
-    right: 20
-  });
+svg.ct-chart-line, svg.ct-chart-line g.ct-labels, svg.ct-chart-line g.ct-labels span.ct-label {
+    overflow: visible;
+}
 
+new Chartist.Bar('.ct-chart', data, options);
 
 
 
