@@ -1,1 +1,2 @@
-# A Separation is my favorite film of the 2010s. 
+# My dissertation is titled A Separation. 
+# And the Iranian film A Separation is my favorite movie in the 2010s. 
