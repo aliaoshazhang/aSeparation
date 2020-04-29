@@ -1,2 +1,1 @@
-My dissertation is titled A Separation. 
-And the Iranian film A Separation is my favorite movie in the 2010s. 
+My project for the 2019-20 CHI fellowship. 
